@@ -1,6 +1,14 @@
 # Ubuntu Server jammy
 # ---
 # Packer Template to create an Ubuntu Server (jammy) on Proxmox
+packer {
+  required_plugins {
+    proxmox = {
+      version = ">= 1.1.5"
+      source  = "github.com/hashicorp/proxmox"
+    }
+  }
+}
 
 # Variable Definitions
 variable "proxmox_api_url" {
@@ -17,7 +25,7 @@ variable "proxmox_api_token_secret" {
 }
 
 # Resource Definiation for the VM Template
-source "proxmox" "ubuntu-server-jammy" {
+source "proxmox-iso" "ubuntu-server-jammy" {
  
     # Proxmox Connection Settings
     proxmox_url = "${var.proxmox_api_url}"
@@ -106,7 +114,7 @@ source "proxmox" "ubuntu-server-jammy" {
 build {
 
     name = "ubuntu-server-jammy"
-    sources = ["source.proxmox.ubuntu-server-jammy"]
+    sources = ["source.proxmox-iso.ubuntu-server-jammy"]
 
     # Provisioning the VM Template for Cloud-Init Integration in Proxmox #1
     provisioner "shell" {

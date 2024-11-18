@@ -28,7 +28,7 @@ source "proxmox" "ubuntu-server-jammy" {
     
     # VM General Settings
     node = "vm01"
-    vm_id = "100"
+    vm_id = "801"
     vm_name = "ubuntu-server-jammy"
     template_description = "Ubuntu Server jammy Image"
 

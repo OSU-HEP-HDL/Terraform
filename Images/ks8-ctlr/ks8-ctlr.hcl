@@ -28,7 +28,7 @@ source "proxmox" "ks8-ctrl" {
     
     # VM General Settings
     node = "vm01"
-    vm_id = "100"
+    vm_id = "800"
     vm_name = "ks8-ctrl"
     template_description = "Ubuntu Server jammy ks8-ctrl Image"
 

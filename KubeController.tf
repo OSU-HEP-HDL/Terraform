@@ -1,3 +1,3 @@
-module "ks8-ctrlr01" {
-  source = "./modules/KubeController"
-}
+# module "ks8-ctrlr01" {
+#   source = "./modules/KubeController"
+# }

@@ -15,9 +15,9 @@ terraform {
 resource "proxmox_vm_qemu" "docker" {
     
     # VM General Settings
-    target_node = "vm01"
-    # vmid = "404"
-    name = "docker"
+    target_node = "VM01"
+    vmid = "105"
+    name = "VD03"
     desc = "Ubuntu Server that acts as a Network Video Recorder"
 
     # VM Advanced General Settings
@@ -41,6 +41,7 @@ resource "proxmox_vm_qemu" "docker" {
     network {
         bridge = "vmbr0"
         model  = "virtio"
+        ipconfig0 = "ip=${var.ip_address}"
     }
 
     # VM Cloud-Init Settings

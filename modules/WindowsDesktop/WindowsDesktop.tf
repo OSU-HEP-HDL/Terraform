@@ -16,9 +16,9 @@ resource "proxmox_vm_qemu" "docker" {
     
     # VM General Settings
     target_node = "VM01"
-    vmid = "105"
-    name = "VD03"
-    desc = "Ubuntu Server that acts as a Network Video Recorder"
+    vmid = "101"
+    name = "Ubuntu"
+    desc = "Ubuntu Server"
 
     # VM Advanced General Settings
     onboot = true 

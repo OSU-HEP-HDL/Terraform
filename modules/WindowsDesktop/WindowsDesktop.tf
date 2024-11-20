@@ -17,14 +17,15 @@ resource "proxmox_vm_qemu" "docker" {
     # VM General Settings
     target_node = "VM01"
     #vmid = "101"
-    name = "Ubuntu"
+    vmid = 101
+    name = "VD03"
     desc = "Ubuntu Server"
 
     # VM Advanced General Settings
     onboot = true 
 
     # VM OS Settings
-    clone = "UbuntuTemplate"
+    clone = "pkr-ubuntu-jammy-1"
 
     # VM System Settings
     agent = 1

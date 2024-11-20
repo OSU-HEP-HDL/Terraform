@@ -29,11 +29,6 @@ variable "proxmox_api_token_secret" {
     type = string
 }
 
-variable "ip_address" {
-    description = "The IP address for the VM"
-    type = string
-}
-
 provider "proxmox" {
 
     pm_api_url = var.proxmox_api_url

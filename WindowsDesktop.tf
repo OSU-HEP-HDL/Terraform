@@ -9,7 +9,6 @@
 
 module "VD03" {
   source = "./modules/WindowsDesktop"
-  ip_address  = "10.206.65.233"
 }
 
 # module "VD04" {

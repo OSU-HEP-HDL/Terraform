@@ -41,7 +41,6 @@ resource "proxmox_vm_qemu" "docker" {
     network {
         bridge = "vmbr0"
         model  = "virtio"
-        ipconfig0 = "ip=${var.ip_address}"
     }
 
     # VM Cloud-Init Settings

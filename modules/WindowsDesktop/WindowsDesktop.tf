@@ -16,7 +16,7 @@ resource "proxmox_vm_qemu" "docker" {
     
     # VM General Settings
     target_node = "VM01"
-    vmid = "101"
+    #vmid = "101"
     name = "Ubuntu"
     desc = "Ubuntu Server"
 

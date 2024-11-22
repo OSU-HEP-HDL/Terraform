@@ -5,6 +5,7 @@ provider "registry.terraform.io/telmate/proxmox" {
   version     = "2.9.14"
   constraints = ">= 2.9.3"
   hashes = [
+    "h1:H/f+LbVyPOLslHLAYnGuMMRqWFZ65K6E3V+MCYgfAyk=",
     "h1:asZa5VKbWeCpLNv1JAutt5CdD27HaGFjxxcr6mvn8Ps=",
     "zh:0d049d33f705e5b814d30028770c084151218439424e99684ce31d7e26a720b5",
     "zh:20b1c64ed56d81de95f3f37b82b45b4654c0de26670c0e87a474c5cce13cd015",
@@ -26,6 +27,7 @@ provider "registry.terraform.io/telmate/proxmox" {
 provider "registry.terraform.io/terraform-lxd/lxd" {
   version = "2.4.0"
   hashes = [
+    "h1:rka2/Qd9sC1xmr0QQU0m/luRAUJ5uTfBq74i1pUU2g0=",
     "h1:v8xVjGbwYDPL5tcMjFB/4GAiyoPZpolk+prE8LBgcsE=",
     "zh:00be61fcae890d060119941ef0e2bf1aff85501ae2c199c7cb9af44803fecab8",
     "zh:1eaaab202a2e81e4fd5c0b389a15a72c275c8575689125da7e84247ccdf31ffe",

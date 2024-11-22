@@ -15,6 +15,15 @@ terraform {
             source = "terraform-lxd/lxd"
         }
     }
+
+    backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "OSU-HDL"
+
+    workspaces {
+      name = "Terraform-HDL"
+    }
+  }
 }
 
 variable "proxmox_api_url" {

@@ -1,0 +1,52 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: en_US.UTF-8
+  refresh-installer:
+      update: false
+  keyboard:
+    layout: us
+  ssh:
+    install-server: true
+    allow-pw: true
+    disable_root: true
+    ssh_quiet_keygen: true
+    allow_public_ssh_keys: true
+  storage:
+    layout:
+      name: direct
+    swap:
+      size: 0
+  network:
+    network:
+      version: 2
+      ethernets:
+        ens18:
+          dhcp4: no  
+          addresses:
+            - 10.221.194.201/24
+          gateway4: 10.221.194.254
+          nameservers:
+            addresses:
+              - 139.78.100.1
+              - 139.78.200.1
+  user-data:
+    package_upgrade: true
+    timezone: America/Denver
+    ssh_pwauth: true
+    users:
+      - name: admin
+        groups: [adm, sudo]
+        lock-passwd: false
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        shell: /bin/bash
+        passwd: $6$8CF6FMQBrGM7ki3c$u3RcNPH.r.oL7XpqQr8Ue/Elem.t1bLrkKxHTMhQOewW36GmjWMVR.7Let/I5zW3kMGGhwd4GsrB6S2NKdWpV0
+  packages:
+    - qemu-guest-agent
+    - sudo
+    - vim
+    - zip
+    - unzip
+    - tmux
+    - unattended-upgrades
+    - prometheus-node-exporter
